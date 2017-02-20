@@ -1,0 +1,70 @@
+<div class="Hedaer-main-block">
+    <div class="container">
+        <div class="logo-block">
+            <h3 style="color:white;">Landscape</h3>
+        </div>
+        <div class="menu-bar">
+            <div class="M-bar-block"><i style="color:white" class="fa  fa-bars"></i></div>
+        </div>
+        <!--<div class="sch-top seach-block-main">
+            <input type="text" name="searchContent" ng-enter="search()" ng-model="searchValue" placeholder="Search by official title or keyword" />
+            <a class="btn btn-primary fa fa-search" ng-click="search()"></a>
+        </div>-->
+    </div>
+    <!--<div class="search_check_box">
+        <input type="checkbox" name="clinical_trials" ng-model="clinical_trial"> Clinical Trials
+        <input type="checkbox" name="drugs" ng-model="drugs">Drugs
+    </div>-->
+</div>
+
+<div class="container">
+    <div class="text-center">
+        <div class="search-outter">
+
+            <!--Records-->
+            <div id="content" class="span10">
+                <div class="row-fluid sortable">
+                    <div class="box span12 span12-res">
+                        <div class="box-header" data-original-title>
+                            <h2><span>Company Lists</span></h2>
+                        </div>
+                        <div class="pull-right footer-pagination" ng-show="myvar">
+                            <uib-pagination total-items="totalCount" ng-model="pageNumber" max-size="maxSize" class="pagination-sm" items-per-page="recordsPerPage" ng-change="pageChanged(pageNumber)"></uib-pagination>
+                        </div>
+                        <div class="box-content">
+                            <p style="margin-top:50px;"></p>
+                            <div class="drug-listing-main">
+                                <div class="drug-listing-main-row" ng-repeat="record in records">
+
+                                    <div class="right-block">
+                                        <h4 class="list-group-item-heading">{{record.name}}
+                                            <span>{{record.country}}</span>
+                                        </h4>
+                                        <p><b>Website</b><br>
+                                            <span>{{record.website}}</span>
+                                        </p>
+                                        <p><b>Description</b><br> {{record.description}}
+                                            <span>&hellip;</span>
+                                        </p>
+                                    </div>
+                                    <!--<a class="btn btn-primary pull-right" ng-click="viewDetails( record._id ,record.recordType)"> View Details</a>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div ng-show="is_loading" class="ajax-loading">
+    <div style="width: 100%; height: 100%; top: 0px; right: 0px; background-color: black; opacity: 0.33; position: absolute; z-index: 10000;">
+
+    </div>
+    <div style="width: 100%; height: 100%; position: absolute; z-index: 10001; top: 0px; right: 0px">
+        <div class="text-center" style="border-radius: 10px; background-color: black; margin-left: auto; margin-right: auto; position: relative; height: 80px; width: 80px; top: 260px;">
+            <img style="margin-top: 24px; margin-left: 1px; width: 35px; color: black;" src="images/ajax-loader.gif">
+        </div>
+    </div>
+</div>
